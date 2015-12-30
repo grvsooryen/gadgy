@@ -58,7 +58,7 @@ span
 {		
     padding: 0px;
     margin: 0px;
-    font-size: 1em;
+    font-size: 0.9em;
     width:none;
 }
 
@@ -82,6 +82,10 @@ input[type="number"]::-webkit-outer-spin-button {
   float: left;
   width: 180px;
 }
+
+[data-ur-carousel-component="scroll_container"] {
+  display: table ;
+  }
 
 .mw-clearfix-box {
   @include clearfix;
@@ -202,14 +206,14 @@ td.ProductName {
 {
     text-align: center;
     display: table;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: $border_radius; 
     
     a
     {
         display: table-cell;
-        vertical-align: middle;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: $border_radius;                
+        vertical-align: middle;                        
     }
 }
 

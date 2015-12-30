@@ -9676,8 +9676,8 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 (function(){
 
-var mapProxyToOrigin = {"http://mlocal.igadgetcommerce.com":"http://www.igadgetcommerce.com","https://mlocal.igadgetcommerce.com":"https://www.igadgetcommerce.com"};
-var mapOriginToProxy = {"http://igadgetcommerce.com":"http://mlocal.igadgetcommerce.com","http://www.igadgetcommerce.com":"http://mlocal.igadgetcommerce.com","https://igadgetcommerce.com":"https://mlocal.igadgetcommerce.com","https://www.igadgetcommerce.com":"https://mlocal.igadgetcommerce.com"};
+var mapProxyToOrigin = {"http://.igadgetcommerce.com":"http://www.igadgetcommerce.com","https://.igadgetcommerce.com":"https://www.igadgetcommerce.com"};
+var mapOriginToProxy = {"http://igadgetcommerce.com":"http://.igadgetcommerce.com","http://www.igadgetcommerce.com":"http://.igadgetcommerce.com","https://igadgetcommerce.com":"https://.igadgetcommerce.com","https://www.igadgetcommerce.com":"https://.igadgetcommerce.com"};
 
 if (typeof(mw) == "undefined") {
 	window.mw = {};

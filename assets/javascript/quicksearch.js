@@ -140,8 +140,7 @@ var QuickSearch = {
 
 	search_done: function(response)
 	{
-		// Cache results	
-		console.log(response);		
+		// Cache results		
 		var cache_name = $('#search_query').val().length+$('#search_query').val();
 		QuickSearch.cache[cache_name] = response;
 
@@ -167,9 +166,8 @@ var QuickSearch = {
 				{
 					var tr = $($(this).text());
 					var url = $('.QuickSearchResultName a', tr).attr('href');
-					url = url.replace(/www.i/, 'mlocal.i')
+					url = url.replace(/http:\/\/www.igadgetcommerce.com/, '')
 					$('.QuickSearchResultName a', tr).attr('href', url);
-					console.log(url);
 					var tmpCounter = counter;
 
 					$(tr).attr('id', 'QuickSearchResult' + tmpCounter);

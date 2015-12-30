@@ -105,7 +105,7 @@ return this};N.options.setup=function(){b(document).Uranium()};b(function(){N.op
 
 $(document).ready(function (){
   $( ".mw_menu_btn" ).click(function() {
-    if($("#Menu").css("display") == 'none')
+    if($("#Menu, .panel-body").css("display") == 'none')
     {
       $( "#Menu" ).slideDown( 700, function() {
         // Animation complete.
@@ -277,8 +277,7 @@ var QuickSearch = {
 
 	search_done: function(response)
 	{
-		// Cache results	
-		console.log(response);		
+		// Cache results		
 		var cache_name = $('#search_query').val().length+$('#search_query').val();
 		QuickSearch.cache[cache_name] = response;
 
@@ -304,9 +303,8 @@ var QuickSearch = {
 				{
 					var tr = $($(this).text());
 					var url = $('.QuickSearchResultName a', tr).attr('href');
-					url = url.replace(/www.i/, 'mlocal.i')
+					url = url.replace(/http:\/\/www.igadgetcommerce.com/, '')
 					$('.QuickSearchResultName a', tr).attr('href', url);
-					console.log(url);
 					var tmpCounter = counter;
 
 					$(tr).attr('id', 'QuickSearchResult' + tmpCounter);

@@ -18,10 +18,10 @@
         -webkit-border-radius: 3px 3px 0 0;
         border-radius: 3px 3px 0 0;
         background: #eee;
-        border: 1px solid #bbb;
+        border: $border;
         color: inherit;
         float: left;
-        font-size: 12px;
+        font-size: $small_font;
         font-weight: bold;
         margin-bottom: -1px;
         padding: 5px 20px 5px;
@@ -34,16 +34,16 @@
     
     li.Active
     {
-        background: #fff;
-        border-bottom-color: #fff;
+        background: $white_background;
+        border-bottom-color: $white;
     }
 }
 
 .tabcontent{
 	padding: 10px;
 	border-radius: 0 0 3px 3px;
-    background: #fff;
-    border: 1px solid #bbb;
+    background: $white_background;
+    border: $border;
     clear: left;
     
     .ListView
@@ -54,7 +54,7 @@
 
 .ToggleSearchFormLink
 {
-    font-size: 12px;
+    font-size: $small_font;
     font-weight: bold;    
     padding: 5px 20px 5px;
 }
@@ -64,8 +64,8 @@
 	margin-bottom: 15px;
 	-webkit-border-radius: 3px;
     border-radius: 3px;
-    background: #fff;
-    border: 1px solid #bbb; 
+    background: $white_background;
+    border: $border; 
     padding: 0 10px;
     
     #price_from, #price_to

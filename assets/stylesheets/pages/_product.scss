@@ -39,7 +39,7 @@
     
     .productOptionViewProductPickListWithImage, .productAttributeList
     {
-        font-size: 12px;
+        font-size: $small_font;
     }
 
     .Value 
@@ -75,7 +75,7 @@
     {
         vertical-align: middle;
         border: none;
-        color: #fff;
+        color: $white_font;
         max-width: none;
         width: 100%;
     }    

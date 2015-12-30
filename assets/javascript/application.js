@@ -3,7 +3,7 @@
 
 $(document).ready(function (){
   $( ".mw_menu_btn" ).click(function() {
-    if($("#Menu").css("display") == 'none')
+    if($("#Menu, .panel-body").css("display") == 'none')
     {
       $( "#Menu" ).slideDown( 700, function() {
         // Animation complete.
