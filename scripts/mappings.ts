@@ -14,8 +14,28 @@ match($status) {
   match($page_type) {
     with(/^home$/) {
       @import pages/home.ts
+    }  
+    with(/^category$/) {
+      @import pages/category.ts
     }
+    with(/^brands$/) {
+      @import pages/brands.ts
+    }
+    with(/^product$/) {
+      @import pages/product.ts
+    }
+    with(/^cart$/) {
+      @import pages/cart.ts
+    }
+    with(/^login$/) {
+      @import pages/login.ts
+    }
+    with(/^search$/) {
+      @import pages/search.ts
+    }
+    
     else() {
+      @import pages/rest.ts
     }
-  }
+  }  
 }

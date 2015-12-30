@@ -16,8 +16,11 @@
   :input_files:
   - vendor/jquery.unveil.js
   - mw.Gadgy.js
-  - http://downloads.moovweb.com/uranium/1.0.176/uranium-pretty.js
+  - uranium.js
+  - application.js
+  - quicksearch.js
 - :output_file: main.js
   :input_directories:
     - main
+
   :input_files:

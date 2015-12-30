@@ -1,11 +1,9 @@
-# match($path) {
+ match($path) {
 #   # Match the Ajax path
-#   with(/foo/) {
-#     html_fragment() {
-#       @import "ajax/foo.ts"
-#     }
-#   }
-# }
+   with(/search/) {     
+       @import "ajax/search.ts"     
+   }
+ }
 
 # needed for product images
 # replace("%24", "$")

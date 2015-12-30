@@ -1,0 +1,83 @@
+// Every page should have a class on the body
+// Scope that in each file at the start
+.mw-product {
+  
+}
+
+.ProductThumb 
+{
+	width: 100% !important;
+	height:auto !important;
+    
+    .ProductThumbImage
+    {
+        height:250px !important;
+        width: 100% !important;        
+    }
+    .ProductThumbImage
+    {
+        @include image-box(); 
+    }
+    #ImageScrollPrev, #ImageScrollNext
+    {
+        display: none !important;
+    }
+    
+    .ImageCarouselBox
+    {
+        padding-top: 15px;
+    }
+}
+
+.ProductMain
+{
+	padding:8px 10px;
+	margin:3px;
+	background-color: $white_background;
+	border: $border;
+    border-radius: $border_radius;
+    
+    .productOptionViewProductPickListWithImage, .productAttributeList
+    {
+        font-size: 12px;
+    }
+
+    .Value 
+    {	
+        display:inline-block;
+        
+        span 
+        {	
+            display: inline-block;
+            vertical-align: middle;
+        }
+            
+        select
+        {
+            margin-bottom: 0px;	
+        }
+    }
+
+    .Label
+    {
+        display:inline-block;
+    }
+}
+
+.BulkDiscount
+{
+	width: 100%;
+	padding: 5px;
+    display: inline-block;
+	vertical-align: middle;
+    
+    input[type='submit'], .FullButtonWidth
+    {
+        vertical-align: middle;
+        border: none;
+        color: #fff;
+        max-width: none;
+        width: 100%;
+    }    
+    
+}

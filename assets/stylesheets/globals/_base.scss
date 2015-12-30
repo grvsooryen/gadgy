@@ -10,17 +10,21 @@ html {
 body {
   -webkit-text-size-adjust: none;   // stop zoom on rotation
   background: $body_background_color;
-  color: $text_black;
+  color: $color;
   font-family: $font_family;
   position: relative;
   min-height: 100%;
   overflow: hidden;
+
 }
 
 a {
   color: $link_color;
-  text-decoration: none;
+  text-decoration: $link_decoration;
   word-wrap: break-word;
+}
+a:hover {
+  text-decoration: none;
 }
 
 // Don't show the highlight of a link when tapped
@@ -50,6 +54,14 @@ sub {
   top: .5ex;
 }
 
+span
+{		
+    padding: 0px;
+    margin: 0px;
+    font-size: 1em;
+    width:none;
+}
+
 // Don't show type number rotator, its just silly
 input[type="number"]::-webkit-outer-spin-button {
   display: none;
@@ -59,10 +71,159 @@ input[type="number"]::-webkit-outer-spin-button {
   @include box-sizing(border-box);
 }
 
+[data-ur-set="carousel"] {
+  overflow: hidden;
+  position: relative;
+}
+[data-ur-carousel-component="dots"] {
+	margin-top:10px;
+}
+[data-ur-carousel-component="item"] {
+  float: left;
+  width: 180px;
+}
+
 .mw-clearfix-box {
   @include clearfix;
 }
+
 .mw-hide {
   display: none;
 }
 
+.mw_arrow {
+  @include sprites-menu_go;
+  float: right;
+}
+
+.Content{
+  padding: 0px 15px;
+}
+
+td.ProductName {
+  font-size: 12px;
+}
+
+.mw-button{    
+	padding: 5px 10px;	
+    height: 36px;
+    width: auto;
+    min-width: 120px;
+    min-height: 20px;
+    max-width: 160px;
+    display: table;
+    position: relative;    
+    vertical-align: middle;
+    border: 1px solid #2a1205;
+    border-radius: 5px;
+    
+    background-color: #852201;
+    box-shadow: rgba(0, 0, 0, 0.901961) 0px 1px 3px, rgba(250, 250, 250, 0.8) 0px -1px 2px;
+    
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	text-align: center;	
+	color: $white_font;
+	line-height: 1.4;
+    text-shadow: rgba(0, 0, 0, 0.901961) 0px -1px;
+    font-size: 16px;
+    font-weight: normal;
+		
+    cursor: pointer;
+    transition: opacity, 0.2s, ease-out;
+}
+
+.inline_textbox{
+  width:150px !important;
+  display: inline-block !important; 
+  border-top-right-radius: 0px !important; 
+  border-bottom-right-radius: 0px !important;
+}
+
+.panel-heading
+{
+	background-color: #802800;
+	color: $white_font;
+	padding: 5px 10px;
+	border-radius: 3px 3px 0px 3px;
+	margin: 2px;
+    
+	&[data-ur-state="disabled"] 
+    {
+		>  .mw_indicator 
+        {
+			@extend .sprites-plus;			
+		}
+	}
+    
+	&[data-ur-state="enabled"] 
+    {
+		>  .mw_indicator 
+        {
+			@extend .sprites-minus;
+
+		}
+	}
+    
+	.mw_indicator
+    {
+        float:right;
+        margin-top:3px;
+	}	
+}
+
+.panel-body
+{
+	background-color: $white_background;
+	border: $border;
+	margin: 0px 3px;
+	border-top:none;
+
+	ul
+    {
+		margin: 0px;
+		padding: 0px;		
+		list-style-type: none;
+        
+		li
+        {			
+			box-shadow: 0 2px 1px -1px #ddd;
+            
+			a
+            {
+				text-decoration: none;
+				padding: 10px 15px 10px 15px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@mixin image-box()
+{
+    text-align: center;
+    display: table;
+    
+    a
+    {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: $border_radius;                
+    }
+}
+
+@mixin mw-round-counter($top, $right)
+{
+    position:absolute;
+    top: $top;
+    right: $right;
+    min-width: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px;
+    color: $white_font;
+    text-align: center;
+    background-color: yellowgreen;
+}

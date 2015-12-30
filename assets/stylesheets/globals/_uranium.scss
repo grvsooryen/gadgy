@@ -66,6 +66,7 @@
 }
 [data-ur-carousel-component="dots"] {
   text-align:center;
+  margin-top:10px;
   margin-bottom:10px;
 }
 [data-ur-carousel-component="dot"] {
@@ -73,7 +74,7 @@
   border-radius: 7px;
   background: black;
   display: inline-block;
-  margin: 0 1px;
+  margin: 10px 1px 0px 1px;
   opacity: 0.8;
   width: 10px;
   height: 10px;

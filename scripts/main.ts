@@ -23,7 +23,7 @@ match($content_type) {
      html_fragment() {
       @import ajax.ts
     }
-  }
+  }  
   
   with(/text\/plain/) {
     match($path, /^\/.+?\.aspx/) {

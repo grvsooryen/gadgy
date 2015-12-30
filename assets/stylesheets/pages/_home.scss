@@ -3,3 +3,69 @@
 .mw-home {
   
 }
+
+.ProductList{
+	margin: 0px;
+	list-style-type: none;
+	padding: 0px;
+	font-size:14px;
+    
+    li 
+    {
+        height: 250px !important;
+        text-align: center;
+    }
+    
+    .ProductImage
+    {
+        @include image-box();        
+    }
+        
+    .ProductDetails
+    {
+        padding-top: 15px;
+        height:45px !important;
+        text-align: center; 
+        margin-left: auto !important;
+        
+        .ProductQty
+        {
+            display: none;    
+        }
+    }
+        
+    .ProductPriceRating
+    {
+        text-align: center;
+        
+        em 
+        {
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.ProductActionAdd, .CompareButton input[type='image'], .BulkDiscount input[type='submit'], #ProductReviews a.FloatRight 
+{
+	@extend .mw-button;
+    
+    a
+    {
+        font-weight: normal;
+        vertical-align: middle;
+        display: table-cell;    
+        color: #fff;
+        text-decoration: none;
+    }
+    
+}
+
+#ProductReviews a.FloatRight
+{
+    text-decoration: none;
+}
+
+.Clear{
+	clear:both;
+}

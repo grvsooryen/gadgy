@@ -20,6 +20,29 @@ match_not($actual_path, /\.css|\.gif|\.jpg|\.jpeg/) {
     with(/^\/$|^\/\?/) { #/
       $page_type = "home"
     }
+    with(/shop+(.*)/) { #/
+      $page_type = "category"
+    }
+    with(/brands+(.*)/) { #/
+      $page_type = "brands"
+    }
+    with(/sample-product+(.*)/) { #/
+      $page_type = "product"
+    }   
+    with(/cart.php+(.*)/) { #/
+      $page_type = "cart"
+    }   
+    with(/login.php+(.*)/) { #/
+      $page_type = "login"
+    }  
+    with(/AjaxSearch/) { #/
+      $page_type = "search"
+    }  
+    with(/search.php+(.*)/) { #/
+      $page_type = "search"
+    }  
+    
+
   }
 }
 

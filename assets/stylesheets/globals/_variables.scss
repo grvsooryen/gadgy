@@ -23,17 +23,19 @@ $black:                   #000000;
 // Grays
 $gray_label:              #919191;
 $gray_medium:             #999999; // gray button
-$gray_input:              #d4d4d4; // input border, gray button border
+$gray_input:              #bbb; // input border, gray button border
 $gray_background:         #f0f0f0; // footer background, box background
+$white_background:        $white;
 
 // Red
 $red_error:               #F00;
 
 
 $error:                   $red_error;
-$body_background_color:   $white;
+$body_background_color:   #f5f5f5;
 $text_black:              $black;
-$link_color:              blue;
+$link_color:              #444;
+$link_decoration:          underline;
 
 // Typography
 // ----------
@@ -41,6 +43,8 @@ $font_family:             sans-serif;
 $base_font_size:          13px;
 $line_height:             24px;
 $text_font:               $base_font_size;
+$color:					  #444;
+$white_font:              $white;
 
 // Header Sizes
 // ------------
@@ -72,3 +76,8 @@ $text_shadow_white:       0 1px $white;
 // Box Shadows
 // -----------
 // TODO
+
+// Header Colors
+// -----------
+$color1: #B03B01; // header color
+$color2: #075899; // link color

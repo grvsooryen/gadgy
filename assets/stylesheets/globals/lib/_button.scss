@@ -13,4 +13,23 @@
     text-decoration: none;
   }
 }
-
+@mixin btn1 {
+  @include background($grad1);
+  @include box-shadow($box_shadow);
+  border: $border1;
+  height: 40px;
+  padding: $spacing;
+  color: $text_color;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: $text_shadow;
+  text-align: center;
+  font-family: $font_family;
+  font-size: $h3_size;
+  font-weight: bold;
+  a {
+    display: block;
+    width: 100%;
+    color: $link_color;
+  }
+}
